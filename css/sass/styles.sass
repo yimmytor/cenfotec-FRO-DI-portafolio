@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Open+Sans:wght@300;400;600&display=swap')
+@import 'variables'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 16px
+
+body
+    background-color: $color-primario
+    font-family: $letra-primaria
+    min-height: 100vh
+    color: $color-contraste
+
+    a
+        text-decoration: none
+        color: $color-contraste
+
+h1, h2
+    font-family: $letra-secundaria
+    font-size: 1.2rem
+
+.contenedor
+    display: flex
+    flex-direction: column
+    max-width: 95%
+    width: 90%
+    margin: auto
+
+header
+    position: fixed
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    height: 2.5rem
+    color: $color-contraste
+    background-color: $color-secundario
+
+    #menu-bar
+        display: none
+
+        &:checked~nav
+            transform: translateX(0)
+
+    .label-menu
+        margin-right: 0.3125rem
+        fill: $color-contraste
+        cursor: pointer
+        
+        svg
+            height: 2.5rem
+
+    nav        
+        position: absolute    
+        top: 2.5rem        
+        z-index: 999
+        width: 80vw
+        height: 85vh
+        transform: translateX(80vw)
+        transition: all 0.3s
+        background-color: $color-secundario
+
+        ul
+            display: flex
+            flex-direction: column            
+            width: 100%                
+            padding: 0.625rem            
+
+            li
+                width: 100%
+                list-style: none
+                    
+                a
+                    display: block   
+                    width: 100%
+                    padding: 0.625rem  
+                    font-family: $letra-secundaria
+                    font-weight: $trazo-regular
+                    text-align: left
+                    color: $color-contraste
+
+main
+    display: flex
+    flex-direction: column    
+
+    section.inicio
+        display: flex
+        background-image: url('/assets/img/fondo.png')        
+        background-repeat: no-repeat
+        background-size: cover                                
+        margin-top: 2.5rem
+        height: 45vh
+        max-height: 100vh                
+
+        .contenedor
+            flex-direction: row
+            justify-content: space-between
+            align-items: flex-end            
+            height: 100%
+            
+            .info       
+                display: flex
+                align-items: center
+                height: 100%                        
+
+                h1
+                    font-size: 0.9rem
+                    
+                    :first-child
+                        font-size: 1rem
+                        font-weight: bold                    
+                        color: $color-secundario                                     
+
+        .avatar
+            height: 95%
+    
+    section#acercade        
+        padding-top: 5rem
+        
+        h2
+            text-align: center
+            color: $color-secundario
+            margin-bottom: 3rem
+
+        p
+            width: 100%
+            margin-bottom: 2rem
+            font-weight: $trazo-delgado
+    
+    section#trabajos
+        padding-top: 5rem
+        
+        h2
+            text-align: center
+            color: $color-secundario
+            margin-bottom: 3rem
+
+        
+
+                    
+                
+                        
+        
