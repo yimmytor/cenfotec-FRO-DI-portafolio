@@ -8,6 +8,7 @@
 
 html
     font-size: 16px
+    scroll-behavior: smooth
 
 body
     background-color: $color-primario
@@ -32,6 +33,7 @@ h1, h2
 
 header
     position: fixed
+    z-index: 9999
     width: 100%
     display: flex
     justify-content: flex-end
@@ -119,7 +121,7 @@ main
     
     section#acercade        
         padding-top: 5rem
-        
+    
         h2
             text-align: center
             color: $color-secundario
@@ -134,12 +136,96 @@ main
         padding-top: 5rem
         
         h2
-            text-align: center
-            color: $color-secundario
             margin-bottom: 3rem
+            text-align: center
+            color: $color-secundario                    
 
-        
+        .trabajos            
+            display: grid
+            grid-template-columns: 1fr 1fr
+            column-gap: 5%
+            row-gap: 20px            
 
+            article.trabajo
+                display: flex
+                border-radius: 10px
+                justify-content: center
+                align-items: center                
+                height: 12.5rem                
+                background-repeat: no-repeat
+                background-size: cover           
+                cursor: pointer
+                
+                &:hover .medalla
+                    -webkit-transition: -webkit-transform 150ms ease-out
+                    transition: transform 150ms ease-out
+                    -webkit-transform: perspective(9.375rem) rotateX(0deg) rotateY(90deg)
+                    transform: perspective(9.375rem) rotateX(0deg) rotateY(90deg)
+
+                .medalla                    
+                    position: relative
+                    display: flex
+                    justify-content: center
+                    align-items: center                    
+                    width: 100px
+                    height: 3.6084rem
+                    background: $color-contraste                    
+                    color: black       
+                    text-align: center             
+                    -ms-backface-visibility: hidden
+                    -webkit-backface-visibility: hidden
+                    -o-backface-visibility: hidden
+                    -moz-backface-visibility: hidden
+                    backface-visibility: hidden
+                    -ms-transform: translate3d(0, 0, 0)
+                    -webkit-transform: translate3d(0, 0, 0)
+                    -o-transform: translate3d(0, 0, 0)
+                    -moz-transform: translate3d(0, 0, 0)
+                    transform: translate3d(0, 0, 0)
+                    -webkit-transition: -webkit-transform 150ms ease-out
+                    transition: transform 150ms ease-out
+                    -webkit-transform: perspective(9.375rem) rotateX(0deg) rotateY(0deg)
+                    transform: perspective(9.375rem) rotateX(0deg) rotateY(0deg)
+
+                .medalla::before 
+                    content: ""
+                    position: absolute
+                    top: -1.8042rem
+                    left: 0
+                    width: 0
+                    height: 0
+                    border-left: 3.125rem solid transparent
+                    border-right: 3.125rem solid transparent
+                    border-bottom: 1.8042rem solid $color-contraste
+
+                .medalla::after 
+                    content: ""
+                    position: absolute
+                    bottom: -1.8042rem
+                    left: 0
+                    width: 0
+                    height: 0
+                    border-left: 3.125rem solid transparent
+                    border-right: 3.125rem solid transparent
+                    border-top: 1.8042rem solid $color-contraste
+            
+            article#trabajo1
+                background-image: url('../assets/img/thumb1.jpg')     
+            
+            article#trabajo2
+                background-image: url('../assets/img/thumb2.jpg')     
+            
+            article#trabajo3
+                background-image: url('../assets/img/thumb3.jpg')     
+            
+            article#trabajo4
+                background-image: url('../assets/img/thumb4.jpg')     
+            
+            article#trabajo5
+                background-image: url('../assets/img/thumb5.jpg')     
+            
+            article#trabajo6
+                background-image: url('../assets/img/thumb6.jpg')     
                     
                 
                         

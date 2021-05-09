@@ -7,6 +7,7 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -35,6 +36,7 @@ h1, h2 {
 
 header {
   position: fixed;
+  z-index: 9999;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -138,9 +140,96 @@ main section#trabajos {
   padding-top: 5rem;
 }
 main section#trabajos h2 {
+  margin-bottom: 3rem;
   text-align: center;
   color: #01b7ff;
-  margin-bottom: 3rem;
+}
+main section#trabajos .trabajos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5%;
+  row-gap: 20px;
+}
+main section#trabajos .trabajos article.trabajo {
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 12.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+main section#trabajos .trabajos article.trabajo:hover .medalla {
+  -webkit-transition: -webkit-transform 150ms ease-out;
+  transition: transform 150ms ease-out;
+  -webkit-transform: perspective(9.375rem) rotateX(0deg) rotateY(90deg);
+  transform: perspective(9.375rem) rotateX(0deg) rotateY(90deg);
+}
+main section#trabajos .trabajos article.trabajo .medalla {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 3.6084rem;
+  background: #ffffff;
+  color: black;
+  text-align: center;
+  -ms-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 150ms ease-out;
+  transition: transform 150ms ease-out;
+  -webkit-transform: perspective(9.375rem) rotateX(0deg) rotateY(0deg);
+  transform: perspective(9.375rem) rotateX(0deg) rotateY(0deg);
+}
+main section#trabajos .trabajos article.trabajo .medalla::before {
+  content: "";
+  position: absolute;
+  top: -1.8042rem;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 3.125rem solid transparent;
+  border-right: 3.125rem solid transparent;
+  border-bottom: 1.8042rem solid #ffffff;
+}
+main section#trabajos .trabajos article.trabajo .medalla::after {
+  content: "";
+  position: absolute;
+  bottom: -1.8042rem;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 3.125rem solid transparent;
+  border-right: 3.125rem solid transparent;
+  border-top: 1.8042rem solid #ffffff;
+}
+main section#trabajos .trabajos article#trabajo1 {
+  background-image: url("../assets/img/thumb1.jpg");
+}
+main section#trabajos .trabajos article#trabajo2 {
+  background-image: url("../assets/img/thumb2.jpg");
+}
+main section#trabajos .trabajos article#trabajo3 {
+  background-image: url("../assets/img/thumb3.jpg");
+}
+main section#trabajos .trabajos article#trabajo4 {
+  background-image: url("../assets/img/thumb4.jpg");
+}
+main section#trabajos .trabajos article#trabajo5 {
+  background-image: url("../assets/img/thumb5.jpg");
+}
+main section#trabajos .trabajos article#trabajo6 {
+  background-image: url("../assets/img/thumb6.jpg");
 }
 
 /*# sourceMappingURL=styles.css.map */
